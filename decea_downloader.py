@@ -100,7 +100,7 @@ def download():
 
     if CartasEmrotaIFR:
 
-        urllib.request.urlretrieve('http://www.aisweb.aer.mil.br/api/?apiKey=1697016245&apiPass=3199c002-755b-1033-a49b-72567f175e3a&area=cartas&especie=rota', 'cycle_rota.xml')
+        urllib.request.urlretrieve('http://www.aisweb.aer.mil.br/api/?apiKey=' + apiKey + '&apiPass=' + apiPass + '&area=cartas&especie=rota', 'cycle_rota.xml')
         sleep(5)
 
         tree = ET.parse('cycle_rota.xml')
@@ -140,7 +140,7 @@ def download():
 
     if CartasVFR:
 
-        urllib.request.urlretrieve('http://www.aisweb.aer.mil.br/api/?apiKey=1697016245&apiPass=3199c002-755b-1033-a49b-72567f175e3a&area=cartas&especie=VFR', 'cycle_vfr.xml')
+        urllib.request.urlretrieve('http://www.aisweb.aer.mil.br/api/?apiKey=' + apiKey + '&apiPass=' + apiPass + '&area=cartas&especie=VFR', 'cycle_vfr.xml')
         sleep(5)
 
         tree = ET.parse('cycle_vfr.xml')
