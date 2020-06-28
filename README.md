@@ -1,6 +1,3 @@
-# Feito Por 
-Ygor Montenegro Araújo / jettagaviation.com
-
 # Sobre
 Utilize este programa elaborado em python para fazer o download de cartas do DECEA. Apenas digite os ICAOs e os tipos de cartas que deseja.
 
@@ -14,3 +11,6 @@ https://www.aisweb.aer.mil.br/?i=publicacoes&p=api
       # Preencher com chave e senha da API DECEA (Deverá ser solicitada via AIS WEB)
       apiKey = ""
       apiPass = ""
+
+# Feito Por 
+Ygor Montenegro Araújo / jettagaviation.com
