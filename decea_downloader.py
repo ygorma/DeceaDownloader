@@ -7,8 +7,14 @@ from tkinter import *
 import tkinter.messagebox
 import sys
 
+# Preencher com chave e senha da API DECEA (Deverá ser solicitada via AIS WEB)
+apiKey = ""
+apiPass = ""
+
+# Início do tkinter
 top = tkinter.Tk()
 
+# Definição da Função de Download
 def download():
 
     global aeroportos
@@ -16,6 +22,8 @@ def download():
     global CartasEmrotaIFR
     global CartasVFR
     global tipos
+    global apiKey
+    global apiPass
 
     # Tratar Variáveis
     aeroportos = aeroportos.get()
@@ -33,7 +41,7 @@ def download():
 
     if CartasIFR:
 
-        urllib.request.urlretrieve('http://www.aisweb.aer.mil.br/api/?apiKey=1697016245&apiPass=3199c002-755b-1033-a49b-72567f175e3a&area=cartas', 'cycle.xml')
+        urllib.request.urlretrieve('http://www.aisweb.aer.mil.br/api/?apiKey=' + apiKey + '&apiPass=' + apiPass + '&area=cartas', 'cycle.xml')
         sleep(5)
 
         tree = ET.parse('cycle.xml')
